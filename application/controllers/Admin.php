@@ -9,6 +9,7 @@ class Admin extends CI_Controller {
         $this->load->view('admin/header');
         $this->load->view('admin/bienvenidos');
         $this->load->view('admin/footer');
+        
     }
 }
 
