@@ -13,6 +13,11 @@ class RecibeDatos_model extends CI_model {
                                        'contrasena'=>'asd', 'punto'=>'valle',
                                        'saldo'=>'0'));
   }
+  function getAsesores(){
+    $query = $this->db->get('asesores');
+    if($query->num_rows() > 0)  return $query;
+    else return false;
+  }
 }
 
 ?>

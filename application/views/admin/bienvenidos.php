@@ -2,7 +2,7 @@
     <?= getNombre(); 
 echo $mimenu;
 
-echo form_open("admin/recibirDatos");
+echo form_open("asesoresing/recibirDatos");
 
 $nombre = array('name' => 'nombre',
               'placeholder' => 'escribe nombre');
