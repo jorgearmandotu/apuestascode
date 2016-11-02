@@ -6,7 +6,7 @@ class Admin extends CI_Controller {
         parent::__construct();
       $this->load->helper('myhelper');
       $this->load->helper('form_helper');
-      $this->load->model('recibeDatos_model');
+      $this->load->model('RecibeDatos_model');
     }
     public function index()  {
       $this->load->library('menu',array('inicio','contacto','productos'));

@@ -7,10 +7,10 @@ class Asesoresing extends CI_Controller {
         parent::__construct();
       $this->load->helper('myhelper');
       $this->load->helper('form_helper');
-      $this->load->model('recibeDatos_model');
+      $this->load->model('RecibeDatos_model');
     }
     function result(){
-        $data['asesores'] = $this->recibeDatos_model->getAsesores();
+        $data['asesores'] = $this->RecibeDatos_model->getAsesores();
         $this->load->view('admin/header');
         $this->load->view('admin/result',$data);
         $this->load->view('admin/footer'); 
@@ -19,7 +19,7 @@ class Asesoresing extends CI_Controller {
     $data = array('nombre'=>$this->input->post('nombre'),
                   'email'=>$this->input->post('email')
                  ); 
-    $this->recibeDatos_model->crearRegistro($data);
+    $this->RecibeDatos_model->crearRegistro($data);
      $this->load->view('admin/header');
         $this->load->view('admin/footer');
   }
