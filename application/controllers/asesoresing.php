@@ -9,7 +9,7 @@ class Asesoresing extends CI_Controller {
       $this->load->helper('form_helper');
       $this->load->model('RecibeDatos_model');
     }
-    function result(){
+    function index(){
         $data['asesores'] = $this->RecibeDatos_model->getAsesores();
         $this->load->view('admin/header');
         $this->load->view('admin/result',$data);
