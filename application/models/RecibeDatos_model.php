@@ -18,6 +18,12 @@ class RecibeDatos_model extends CI_model {
     if($query->num_rows() > 0)  return $query;
     else return false;
   }
+  function getAsesor($id){
+    $this->db->where('cc',$id);
+    $query = $this->db->get('asesores');
+    if($query->num_rows() > 0)  return $query;
+    else return false;
+  }
 }
 
 ?>

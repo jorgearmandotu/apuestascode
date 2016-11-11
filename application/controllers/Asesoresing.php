@@ -10,8 +10,13 @@ class Asesoresing extends CI_Controller {
       $this->load->model('RecibeDatos_model');
     }
     function index(){
-        $data['asesores'] = $this->RecibeDatos_model->getAsesores();
+        $data['segmento'] = $this->uri->segment(5);
         $this->load->view('admin/header');
+        if(!$data['segmento']){
+            $data['asesores'] = $this->RecibeDatos_model->getAsesores(); 
+        }else{
+             $data['asesores'] = $this->RecibeDatos_model->getAsesor($data['segmento']);
+        }
         $this->load->view('admin/result',$data);
         $this->load->view('admin/footer'); 
     }
